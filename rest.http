@@ -1,0 +1,22 @@
+@host = localhost
+@port = 8080
+@table=Table_1
+
+### status
+
+GET http://{{host}}:{{port}}/rest/
+
+### info
+
+GET http://{{host}}:{{port}}/rest/$info
+
+### catalog
+
+GET http://{{host}}:{{port}}/rest/$catalog
+
+### catalog all
+
+GET http://{{host}}:{{port}}/rest/$catalog/$all
+
+### catalog @table
+GET http://{{host}}:{{port}}/rest/$catalog/{{table}}
