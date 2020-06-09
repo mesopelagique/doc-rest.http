@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "01ccbbc9-7343-4444-9632-4981f4560e9d",
+		"name": "rest",
+		"description": "4d rest api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API Base",
+			"item": [
+				{
+					"name": "status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/rest/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"rest",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/rest/$info",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"rest",
+								"$info"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "bf6c677a-9e79-4013-964a-26c376aa6ae0",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "e2affbdf-72dd-40a3-ba7a-faca342ec4db",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Catalog",
+			"item": [
+				{
+					"name": "catalog",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/rest/$catalog",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"rest",
+								"$catalog"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "catalog all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/rest/$catalog/$all",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"rest",
+								"$catalog",
+								"$all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "catalog @table",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/rest/$catalog/{{table}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"rest",
+								"$catalog",
+								"{{table}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Data",
+			"item": [
+				{
+					"name": "get @table data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/rest/{{table}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"rest",
+								"{{table}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create or update @table entity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ID\": {{primaryKey}}\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/rest/{{table}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"rest",
+								"{{table}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete @table entity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ID\": {{primaryKey}}\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/rest/{{table}}({{primaryKey}}?$method=delete",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"rest",
+								"{{table}}({{primaryKey}}"
+							],
+							"query": [
+								{
+									"key": "$method",
+									"value": "delete"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "f4472a26-2759-4306-b177-b37c6a5ad0bf",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "ccbd1b8c-7695-4691-99eb-2f0c7cd32ed6",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "b4952a0b-175f-4206-a7a2-1229e17ed4ad",
+			"key": "hostname",
+			"value": "localhost",
+			"type": "string"
+		},
+		{
+			"id": "79b0b5f5-ab60-48f1-8581-507ef5280753",
+			"key": "port",
+			"value": "8080",
+			"type": "string"
+		},
+		{
+			"id": "94f61aeb-f190-483d-9fd0-46b8e1043832",
+			"key": "scheme",
+			"value": "http",
+			"type": "string"
+		},
+		{
+			"id": "59c71a1a-7bda-49fc-8c12-0d6ac97ed5cd",
+			"key": "baseURL",
+			"value": "{{scheme}}://{{hostname}}:{{port}}",
+			"type": "string"
+		},
+		{
+			"id": "6dc8868e-8a9b-4d06-b563-94a867c0dabd",
+			"key": "table",
+			"value": "Table_1",
+			"type": "string"
+		},
+		{
+			"id": "28257638-8641-461a-baad-29e80acd2dad",
+			"key": "primaryKey",
+			"value": "1",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

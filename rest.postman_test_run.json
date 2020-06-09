@@ -1,0 +1,194 @@
+{
+	"id": "5550d7e4-7a31-450f-a2ea-1641fc4c4dc8",
+	"name": "rest",
+	"timestamp": "2020-06-09T04:33:05.786Z",
+	"collection_id": "5e7abd33-8cb8-4028-9c0e-14f1a346e249",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "72ec9cbd-32f0-47ae-8ae3-0d7b58a8e575",
+			"name": "status",
+			"url": "http://localhost:8080/rest/",
+			"time": 12,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				12
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "9b84ea43-1545-48d0-bc8f-2333bbc5733e",
+			"name": "info",
+			"url": "http://localhost:8080/rest/$info",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "dcc79313-425f-4513-8131-63d9ecea422f",
+			"name": "catalog",
+			"url": "http://localhost:8080/rest/$catalog",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "ad76aaf6-eb97-4021-bfd0-e712d3620b05",
+			"name": "catalog all",
+			"url": "http://localhost:8080/rest/$catalog/$all",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				10
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "55c08905-557f-4bec-8397-8f612d37d9ac",
+			"name": "catalog @table",
+			"url": "http://localhost:8080/rest/$catalog/Table_1",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e1285a87-127c-4c33-a475-6af0c4ece646",
+			"name": "get @table data",
+			"url": "http://localhost:8080/rest/Table_1",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "3c2f5032-1f6a-418a-900a-7430aa07fea1",
+			"name": "create or update @table entity",
+			"url": "http://localhost:8080/rest/Table_1",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "7aeaa95c-8f75-4c33-beae-6a161dcc4e01",
+			"name": "delete @table entity",
+			"url": "http://localhost:8080/rest/Table_1(1?$method=delete",
+			"time": 24,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				24
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 79,
+	"collection": {
+		"requests": [
+			{
+				"id": "72ec9cbd-32f0-47ae-8ae3-0d7b58a8e575",
+				"method": "GET"
+			},
+			{
+				"id": "9b84ea43-1545-48d0-bc8f-2333bbc5733e",
+				"method": "GET"
+			},
+			{
+				"id": "dcc79313-425f-4513-8131-63d9ecea422f",
+				"method": "GET"
+			},
+			{
+				"id": "ad76aaf6-eb97-4021-bfd0-e712d3620b05",
+				"method": "GET"
+			},
+			{
+				"id": "55c08905-557f-4bec-8397-8f612d37d9ac",
+				"method": "GET"
+			},
+			{
+				"id": "e1285a87-127c-4c33-a475-6af0c4ece646",
+				"method": "GET"
+			},
+			{
+				"id": "3c2f5032-1f6a-418a-900a-7430aa07fea1",
+				"method": "POST"
+			},
+			{
+				"id": "7aeaa95c-8f75-4c33-beae-6a161dcc4e01",
+				"method": "POST"
+			}
+		]
+	}
+}
